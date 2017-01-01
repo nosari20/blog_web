@@ -1,0 +1,30 @@
+:host.preview md-card-content{
+    max-height: 350px;
+    overflow: hidden;
+}
+md-card{
+    padding-top: 0;
+}
+md-card-header{
+    position: relative;
+    flex-direction: column;
+    height: auto;
+}
+md-card-header /deep/ .md-card-header-text{
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 15px;
+    height: auto;
+    margin-left: -10px
+}
+h1{
+    margin: 0;
+}
+h1 a{
+    color: #FFF;
+    font-weight: normal;
+}
+md-card-subtitle{
+    color: #FFF;
+}
+

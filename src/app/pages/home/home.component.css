@@ -1,0 +1,15 @@
+:host{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+}
+
+app-post{
+    margin-bottom: 20px;
+}
+
+button{
+  width: 50px;
+  margin: 20px auto;
+}

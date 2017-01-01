@@ -1,0 +1,12 @@
+:host{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #009688;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+  min-height: 50px;
+  position: relative;
+  bottom: 0;
+  padding: 10px;
+
+}
