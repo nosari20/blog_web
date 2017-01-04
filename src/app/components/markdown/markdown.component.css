@@ -1,0 +1,6 @@
+:host /deep/ pre{
+    background-color: #fafafa;
+    padding: .5rem;
+    line-height: 1.25;
+    overflow-x: auto;
+}

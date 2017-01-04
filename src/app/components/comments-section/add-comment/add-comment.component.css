@@ -1,0 +1,11 @@
+:host{
+    flex: 1;
+    padding: 10px;
+}
+md-input-container{
+    width: calc(100% - 61px)
+}
+button{
+    vertical-align: super;
+    color: #FFF;
+}

@@ -1,3 +1,6 @@
+:host{
+    flex:1;
+}
 :host.preview md-card-content{
     max-height: 350px;
     overflow: hidden;
@@ -10,6 +13,9 @@ md-card-header{
     flex-direction: column;
     height: auto;
 }
+md-card-header img{
+    margin-top: 0;
+}
 md-card-header /deep/ .md-card-header-text{
     position: absolute;
     bottom: 0;
@@ -19,6 +25,13 @@ md-card-header /deep/ .md-card-header-text{
 }
 h1{
     margin: 0;
+
+}
+@media (max-width:600px){
+  h1{
+    margin: 0 -16px;
+    font-size: x-large;
+  }  
 }
 h1 a{
     color: #FFF;

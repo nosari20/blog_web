@@ -10,6 +10,7 @@
     <markdown *ngIf="post.content">
       {{post.content}}
     </markdown>
+    <comments-section *ngIf="!preview && post" [postid]="post.id"></comments-section>
   </md-card-content>
   <button *ngIf="preview" md-button (click)="router.navigate(['/posts', post.id])">Lire tout</button>
 </md-card>

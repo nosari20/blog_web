@@ -1,3 +1,4 @@
+import { Comment } from './comment';
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise'
@@ -36,6 +37,12 @@ export class BlogService {
                   return post
                 });
     }
+  }
+
+  getComments(id:number): Promise<Comment[]> {
+    return this.http.get(API_URL+'/posts/'+id+'/comments')
+              .toPromise()
+              .then(response =>response.json() as Comment[]);
   }
 
 

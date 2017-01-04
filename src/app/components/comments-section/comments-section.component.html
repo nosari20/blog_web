@@ -1,0 +1,8 @@
+<h3 md-subheader>Commentaires</h3>
+<add-comment></add-comment>
+<md-list *ngIf="!loading">  
+  <md-list-item *ngFor="let comment of comments">
+    <comment [comment]="comment"></comment>
+  </md-list-item>
+</md-list>
+<loader *ngIf="loading" [_size]="10"></loader>

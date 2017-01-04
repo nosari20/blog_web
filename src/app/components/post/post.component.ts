@@ -4,12 +4,12 @@ import { Post } from './../../services/blog/post';
 import { Component, OnInit,OnChanges, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-post',
+  selector: 'post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css'],
   host: {'[class.preview]':'preview'},
 })
-export class PostComponent implements OnInit {
+export class PostComponent implements OnInit, OnChanges {
 
   @Input() postInput : Post;
   @Input() preview : boolean = false;
@@ -23,19 +23,16 @@ export class PostComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    
+  }
+  
+  ngOnChanges(){
     if(!this.postInput && this.postid){
       this.getPost();
     }else{
       this.post = this.postInput;
     }
     document.body.scrollTop = 0;
-  }
-  
-  ngOnChanges(){
-    if(!this.postInput){
-      this.getPost();
-      document.body.scrollTop = 0;
-    }
   }  
 
   getPost(){

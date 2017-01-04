@@ -22,6 +22,9 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { PostComponent } from './components/post/post.component';
 import { MarkdownComponent } from './components/markdown/markdown.component';
 import { PostDetailsComponent } from './pages/post-details/post-details.component';
+import { CommentsSectionComponent } from './components/comments-section/comments-section.component';
+import { CommentComponent } from './components/comments-section/comment/comment.component';
+import { AddCommentComponent } from './components/comments-section/add-comment/add-comment.component';
 
 const appRoutes: Routes = [
  { path: '', component: HomeComponent },
@@ -48,7 +51,10 @@ const appRoutes: Routes = [
     LoaderComponent,
     PostComponent,
     MarkdownComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    CommentsSectionComponent,
+    CommentComponent,
+    AddCommentComponent
   ],
   imports: [
     BrowserModule,
