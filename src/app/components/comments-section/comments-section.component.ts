@@ -33,6 +33,11 @@ export class CommentsSectionComponent implements OnInit, OnChanges {
         .catch(this.handleError);
   }
 
+  addComment(comment: Comment){
+    this.comments.unshift(comment);
+
+  }
+
   handleError(error: any): Promise<any> {
     console.error('An error occurred', error);
     return Promise.reject(error.message || error);

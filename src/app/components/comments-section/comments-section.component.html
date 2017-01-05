@@ -1,5 +1,5 @@
 <h3 md-subheader>Commentaires</h3>
-<add-comment></add-comment>
+<add-comment [postid]="postid" (addCommentEvent)="addComment($event)"></add-comment>
 <md-list *ngIf="!loading">  
   <md-list-item *ngFor="let comment of comments">
     <comment [comment]="comment"></comment>

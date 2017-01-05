@@ -1,6 +1,6 @@
 <md-card *ngIf="post">
-  <md-card-header>
-    <img md-card-image src="{{post.image}}">
+  <md-card-header [style.background-image]="'url(' + post.image + ')'">
+    <img *ngIf="false" md-card-image src="{{post.image}}">
     <md-card-title><h1><a [routerLink]="'/posts/'+post.id">{{post.title}}</a></h1></md-card-title>
     <md-card-subtitle>{{post.subtitle}}</md-card-subtitle>
     <md-card-subtitle>{{post.created_at | date:'fullDate'}}</md-card-subtitle>

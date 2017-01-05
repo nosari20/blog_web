@@ -4,3 +4,6 @@
     line-height: 1.25;
     overflow-x: auto;
 }
+:host /deep/ *{
+    max-width: 100%
+}

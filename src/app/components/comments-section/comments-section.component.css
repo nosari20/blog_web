@@ -1,8 +1,6 @@
 :host{
     display: flex;
     flex-direction: column;
-    margin: auto -24px;
-    padding: 24px;
     background: #EEE;
 }
 md-list-item /deep/ .md-list-item{
