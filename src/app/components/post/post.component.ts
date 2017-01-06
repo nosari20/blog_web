@@ -13,7 +13,7 @@ export class PostComponent implements OnInit, OnChanges {
 
   @Input() postInput : Post;
   @Input() preview : boolean = false;
-  @Input() postid : number;
+  @Input() postid : string;
   post : Post;
   loading : boolean = false;
 

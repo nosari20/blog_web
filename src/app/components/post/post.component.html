@@ -1,7 +1,7 @@
 <md-card *ngIf="post">
   <md-card-header [style.background-image]="'url(' + post.image + ')'">
     <img *ngIf="false" md-card-image src="{{post.image}}">
-    <md-card-title><h1><a [routerLink]="'/posts/'+post.id">{{post.title}}</a></h1></md-card-title>
+    <md-card-title><h1><a [routerLink]="'/posts/'+post.sluged_title">{{post.title}}</a></h1></md-card-title>
     <md-card-subtitle>{{post.subtitle}}</md-card-subtitle>
     <md-card-subtitle>{{post.created_at | date:'fullDate'}}</md-card-subtitle>
   </md-card-header>  
@@ -12,6 +12,6 @@
     </markdown>
     <comments-section *ngIf="!preview && post" [postid]="post.id"></comments-section>
   </md-card-content>
-  <button *ngIf="preview" md-button (click)="router.navigate(['/posts', post.id])">Lire tout</button>
+  <button *ngIf="preview" md-button (click)="router.navigate(['/posts', post.sluged_title])">Lire tout</button>
 </md-card>
 <loader *ngIf="!post" [_size]="10"></loader>

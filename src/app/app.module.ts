@@ -25,12 +25,14 @@ import { PostDetailsComponent } from './pages/post-details/post-details.componen
 import { CommentsSectionComponent } from './components/comments-section/comments-section.component';
 import { CommentComponent } from './components/comments-section/comment/comment.component';
 import { AddCommentComponent } from './components/comments-section/add-comment/add-comment.component';
+import { CategoryComponent } from './pages/category/category.component';
 
 const appRoutes: Routes = [
  { path: '', component: HomeComponent },
  { path: 'about', component: AboutComponent },
 
- { path: 'posts/:id', component: PostDetailsComponent },
+ { path: 'posts/:slug', component: PostDetailsComponent },
+ { path: 'category/:slug', component: CategoryComponent },
 
  { path: '404', component: NotFoundComponent },
  { path: '**', redirectTo: '404', },
@@ -54,7 +56,8 @@ const appRoutes: Routes = [
     PostDetailsComponent,
     CommentsSectionComponent,
     CommentComponent,
-    AddCommentComponent
+    AddCommentComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

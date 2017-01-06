@@ -1,7 +1,9 @@
-<md-input-container>
-  <input md-input placeholder="Auteur" [(ngModel)]="comment.author">
-</md-input-container>
-<md-input-container>
-  <textarea md-input placeholder="Ajouter un commentaire" [(ngModel)]="comment.text"></textarea>
-</md-input-container>
-<button md-fab (click)="send()"><md-icon>send</md-icon></button>
+<form (ngSubmit)="send()" #commentForm="ngForm">
+  <md-input-container>
+        <input md-input placeholder="Auteur" required [(ngModel)]="comment.author" name="author">
+  </md-input-container>
+  <md-input-container>
+    <textarea md-input placeholder="Ajouter un commentaire" required [(ngModel)]="comment.text" name="text"></textarea>
+  </md-input-container>
+  <button type="submit" [disabled]="!commentForm.form.valid" md-fab ><md-icon>send</md-icon></button>
+</form>

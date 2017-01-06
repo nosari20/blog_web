@@ -9,9 +9,8 @@ import { Subscription } from 'rxjs/Rx';
 })
 export class PostDetailsComponent implements OnInit {
 
-private sub: Subscription;  
-  private id: number
-  private scrollPos: number = 0;
+  private sub: Subscription;  
+  private id: number|string
 
   constructor(
     private route: ActivatedRoute,
@@ -20,9 +19,7 @@ private sub: Subscription;
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      this.scrollPos = 0;
-
-      this.id = +params['id'];
+      this.id = params['slug'];
     });
 
   }

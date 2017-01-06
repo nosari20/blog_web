@@ -24,7 +24,8 @@ export class HomeComponent implements OnInit {
     this.loading = true;
     this.blogService
         .getPosts(offset,5)
-        .then(posts => {this.posts = this.posts.concat(posts);this.loading = false;})
+        .then(posts => {
+          this.posts = this.posts.concat(posts);this.loading = false;})
         .catch(this.handleError);
   }
 

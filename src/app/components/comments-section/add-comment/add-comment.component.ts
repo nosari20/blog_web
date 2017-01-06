@@ -20,13 +20,14 @@ export class AddCommentComponent implements OnInit {
   }
 
   send(){
-    this.addCommentToList();
+    
     this.blogService
         .postComment(this.postid, this.comment)
         .then(()=>{
           this.comment.created_at = new Date().toUTCString();
           
         })
+    this.addCommentToList();
   }
 
   addCommentToList(){

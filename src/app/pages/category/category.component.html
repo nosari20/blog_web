@@ -1,0 +1,4 @@
+<post *ngFor="let post of posts" [postid]="post.id" [preview]="true"></post>
+
+<button *ngIf="!loading" md-button (click)="getPosts(posts.length, false)">Plus</button>
+<loader *ngIf="loading" [_size]="10"></loader>
